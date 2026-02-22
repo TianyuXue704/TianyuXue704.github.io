@@ -3,8 +3,8 @@ title: Everything About TianyuXue
 subtitle: by HTML5 UP
 email: 2094783985@qq.com
 description: Everything about TianyuXue,including article and photos.
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
-url: https://tianyuxue704.github.io
+url: "https://tianyuxue704.github.io"
+baseurl: ""
 city: Hangzhou,Zhejiang
 country: China
 phone: 18609136285
