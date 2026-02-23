@@ -1,13 +1,40 @@
 ---
-layout: post
-title: Generic
-description: Lorem ipsum dolor est
+layout: page
+title: Reviews
+description: about books and movies
 image: assets/images/pic11.jpg
 nav-menu: true
 ---
 
-Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
+<div id="main" class="alt">
+    <section id="one">
+        <div class="inner">
+            <header class="major">
+                <h1>contents</h1>
+            </header>
+            <p>Rates and simple review of books and movies.</p>
+        </div>
+    </section>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
-
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.
+    <section id="two" class="spotlights">
+        {% for post in site.categories.reviews %}
+        <section>
+            <a href="{{ post.url | relative_url }}" class="image">
+                <img src="{{ post.image | relative_url }}" alt="" data-position="center center" />
+            </a>
+            <div class="content">
+                <div class="inner">
+                    <header class="major">
+                        <h3>{{ post.title }}</h3>
+                    </header>
+                    <p><strong>Stars：</strong>{{ post.rating }}</p>
+                    <p>{{ post.description }}</p>
+                    <ul class="actions">
+                        <li><a href="{{ post.url | relative_url }}" class="button">阅读全文</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+    </section>
+</div>
