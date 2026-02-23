@@ -5,7 +5,7 @@ date: 2026-02-23
 categories: reviews
 rating: "7/10"
 description: "A profound exploration of the human soul and the burden of intellect through Charlie Gordon's eyes."
-image: assets/images/pic11.jpg
+image: assets/images/OIP.jpg
 ---
 ## The Tragedy of Awareness: A Review of *Flowers for Algernon*
 
