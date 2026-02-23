@@ -14,26 +14,27 @@ nav-menu: true
         </div>
     </section>
 
-    <section id="two" class="spotlights">
-        {% for post in site.categories.reviews %}
-        <section>
-            <a href="{{ post.url | relative_url }}" class="image">
-                <img src="{{ post.image | relative_url }}" alt="" data-position="center center" />
-            </a>
-            <div class="content">
-                <div class="inner">
-                    <header class="major">
-                        <h3>{{ post.title }}</h3>
-                    </header>
-                    <p>{{ post.description }}</p>
-                    <ul class="actions">
-                        <li><a href="{{ post.url | relative_url }}" class="button">Read full</a></li>
-                    </ul>
-                </div>
+   <section id="two" class="spotlights">
+    {% for post in site.categories.reviews %}
+    <section>
+        <a href="{{ post.url | relative_url }}" class="image">
+            <img src="{{ post.image | relative_url }}" alt="" data-position="center center" />
+        </a>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>{{ post.title }}</h3>
+                    <div class="rating" style="color: #f39c12; margin-bottom: 1em;">
+                        Rating：{{ post.rating }}
+                    </div>
+                </header>
+                <p>{{ post.description }}</p>
+                <ul class="actions">
+                    <li><a href="{{ post.url | relative_url }}" class="button">Read full</a></li>
+                </ul>
             </div>
-        </section>
-        {% empty %}
-        <div class="inner"><p>还没有评论，去看部电影吧！</p></div>
-        {% endfor %}
+        </div>
     </section>
+    {% endfor %}
+</section>
 </div>
