@@ -5,14 +5,12 @@ description: about books and movies
 image: assets/images/pic11.jpg
 nav-menu: true
 ---
-
 <div id="main" class="alt">
     <section id="one">
         <div class="inner">
             <header class="major">
-                <h1>contents</h1>
+                <h1>Reviews / 书影音</h1>
             </header>
-            <p>Rates and simple review of books and movies.</p>
         </div>
     </section>
 
@@ -27,7 +25,6 @@ nav-menu: true
                     <header class="major">
                         <h3>{{ post.title }}</h3>
                     </header>
-                    <p><strong>Stars：</strong>{{ post.rating }}</p>
                     <p>{{ post.description }}</p>
                     <ul class="actions">
                         <li><a href="{{ post.url | relative_url }}" class="button">Read full</a></li>
@@ -35,6 +32,8 @@ nav-menu: true
                 </div>
             </div>
         </section>
+        {% empty %}
+        <div class="inner"><p>还没有评论，去看部电影吧！</p></div>
         {% endfor %}
     </section>
 </div>
