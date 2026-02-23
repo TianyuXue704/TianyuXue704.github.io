@@ -9,7 +9,7 @@ background: assets/images/pic02.jpg
     <section id="one">
         <div class="inner">
             <header class="major">
-                <h1>我的日记</h1>
+                <h1>Welcome!</h1>
             </header>
 
             <ul class="alt">
