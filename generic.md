@@ -30,7 +30,7 @@ nav-menu: true
                     <p><strong>Stars：</strong>{{ post.rating }}</p>
                     <p>{{ post.description }}</p>
                     <ul class="actions">
-                        <li><a href="{{ post.url | relative_url }}" class="button">阅读全文</a></li>
+                        <li><a href="{{ post.url | relative_url }}" class="button">Read full</a></li>
                     </ul>
                 </div>
             </div>
